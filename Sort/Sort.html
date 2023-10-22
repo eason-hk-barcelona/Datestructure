@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>排序</title>
+</head>
+
+<body>
+  <script src="Sort.js"></script>
+  <script>
+    // 示例使用
+    const sorting = new SortingAlgorithms();
+    const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+    console.log("原始数组:", arr);
+
+    const insertionSortedArray_1 = [...arr];
+    const insertionSortedArray_2 = [...arr];
+    sorting.insertionSort(insertionSortedArray_1);
+    sorting.binaryInsertionSort(insertionSortedArray_2);
+    console.log("插入排序结果:", insertionSortedArray_1, insertionSortedArray_2);
+
+    const heapSortedArray = [...arr];
+    sorting.heapSort(heapSortedArray);
+    console.log("堆排序结果:", heapSortedArray);
+
+    const quickSortedArray = [...arr];
+    sorting.quickSort(quickSortedArray, 0, quickSortedArray.length - 1);
+    console.log("快速排序结果:", quickSortedArray);
+
+    const mergeSortedArray = [...arr];
+    sorting.mergeSort(mergeSortedArray, 0, mergeSortedArray.length - 1);
+    console.log("归并排序结果:", mergeSortedArray);
+  </script>
+</body>
+
+</html>

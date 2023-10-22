@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双向链表</title>
+</head>
+
+<body>
+  <script src="DoublyLinkedList.js"></script>
+  <script>
+    const myList = new DoubleLinkedList();
+
+    myList.insert(1, 0);
+    myList.insert(2, 1);
+    myList.insert(3, 2);
+
+    console.log(myList.get(1)); // 输出: 2
+
+    myList.update(1, 4);
+    console.log(myList.get(1)); // 输出: 4
+
+    myList.remove_pos(0);
+    console.log(myList.get(0)); // 输出: 4
+
+    myList.insert(5, 0);
+    console.log(myList.get(0), myList.get(1));
+    myList.remove_pos(1);
+    console.log(myList.get(0)); // 输出: 5
+
+  </script>
+</body>
+
+</html>

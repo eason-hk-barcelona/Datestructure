@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图</title>
+</head>
+
+<body>
+  <script src="graph.js"></script>
+  <script>
+    const graph = new Graph();
+    graph.addVertex("A");
+    graph.addVertex("B");
+    graph.addVertex("C");
+    graph.addVertex("D");
+    graph.addVertex("E");
+
+    graph.addEdges("A", "B");
+    graph.addEdges("A", "C");
+    graph.addEdges("B", "D");
+    graph.addEdges("C", "D");
+    graph.addEdges("D", "E");
+    console.log(graph.topologicalSort());
+  </script>
+</body>
+
+</html>

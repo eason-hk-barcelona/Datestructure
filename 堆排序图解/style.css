@@ -1,0 +1,86 @@
+body {
+  font-family: Microsoft Yahei;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+input {
+  height: 22px;
+  text-indent: 1em;
+  border: 1.5px solid black;
+  border-radius: 15px;
+}
+
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+  /* 水平间距 */
+  margin: 0 20px;
+  background-color: rgb(48, 183, 228);
+  color: white;
+}
+
+
+.level-container {
+  display: flex;
+  /* 水平居中每个节点容器 */
+  justify-content: center;
+  /* 调整间距 */
+  margin: 20px;
+}
+
+.level-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  /* 调整间距 */
+}
+
+.level-container>.node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 10px;
+  /* 调整水平间距 */
+}
+
+.node-connector {
+  position: absolute;
+  width: 2px;
+  /* 连接线的宽度 */
+  background-color: black;
+  top: 100%;
+  /* 位于节点底部 */
+  left: 50%;
+  /* 位于节点中心 */
+  transform: translateX(-50%);
+  /* 水平居中连接线 */
+}

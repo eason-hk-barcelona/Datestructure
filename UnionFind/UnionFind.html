@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="UnionFind.js"></script>
+  <script>
+    const N = 5;
+    const uf = new UnionFind(N);
+
+    uf.union(0, 1); // 合并元素0和元素1所在的集合
+    uf.union(2, 3); // 合并元素2和元素3所在的集合
+
+    console.log(uf.find(3)); //应该输出2
+    console.log(uf.find(0) === uf.find(1)); // 应该为true，因为0和1在同一个集合中
+    console.log(uf.find(0) === uf.find(2)); // 应该为false，因为0和2不在同一个集合中
+  </script>
+</body>
+
+</html>

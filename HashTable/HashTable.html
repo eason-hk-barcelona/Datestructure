@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>哈希表</title>
+</head>
+
+<body>
+  <script src="hashTable.js"></script>
+  <script>
+    const hashTable = new HashTable();
+
+    // Insertion and Retrieval
+    hashTable.update("apple", 5);
+    hashTable.update("banana", 2);
+    console.log(hashTable.find("apple")); // Should print 5
+    console.log(hashTable.find("banana")); // Should print 2
+
+    // Update existing key
+    hashTable.update("apple", 10);
+    console.log(hashTable.find("apple")); // Should print 10
+
+    // Removal
+    hashTable.remove("banana");
+    try {
+      console.log(hashTable.find("banana")); // Should throw "Key not found" error
+    } catch (error) {
+      console.log(error.message);
+    }
+
+    // Resizing
+    for (let i = 0; i < 20; i++) {
+      hashTable.update(`key${i}`, i);
+    }
+    console.log(hashTable.size); // Should print the new size after resizing
+
+    // Additional cases
+    console.log(hashTable.find("nonexistent")); // Should throw "Key not found" error
+    hashTable.remove("nonexistent"); // Should throw "Key not found" error
+
+  </script>
+</body>
+
+
+</html>
