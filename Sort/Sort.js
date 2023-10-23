@@ -63,7 +63,7 @@ class SortingAlgorithms {
         // 建大顶堆
         const n = arr.length;
 
-        for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {//这里的i即第一个有孩子的叶子节点，或者n/2
+        for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {//这里的i即第一个有孩子的叶子节点
             this.maxHeapify(arr, n, i);
         }
         //sort
@@ -80,7 +80,7 @@ class SortingAlgorithms {
 
         let i = l - 1;
         let j = r + 1;
-        const x = arr[Math.floor((l + r) / 2)]; //选取中位数为分界元素
+        const x = arr[Math.floor((l + r) / 2)]; //选取分界元素
 
         while (i < j) {
             do i++; while (arr[i] < x);
@@ -103,7 +103,7 @@ class SortingAlgorithms {
         this.mergeSort(arr, mid + 1, r);
 
         let k = 0, i = l, j = mid + 1;
-        while (i <= mid && j << r) {
+        while (i <= mid && j <= r) {
             if (arr[i] <= arr[j]) tmp[k++] = arr[i++];
             else tmp[k++] = arr[j++];
         }

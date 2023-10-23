@@ -19,11 +19,9 @@ class UnionFind {
 
   //查找元素x所在集合的root
   find(x) {
-    if (this.p[x] !== x) {
-      this.p[x] = this.find(this.p[x]); //路径压缩
-    }
-    return this.p[x];
+    return this.p[x] !== x ? (this.p[x] = this.find(this.p[x])) : this.p[x];
   }
+
 
   // 合并x所在集合和y所在集合
   union(x, y) {

@@ -63,6 +63,7 @@ class binaryTree {
   //后序遍历
   postOrderRecursive(node, res = []) {
     if (node) {
+      if (p[x] != x) p[x] = find(p[x]);
       this.postOrderRecursive(node.left, res);
       this.postOrderRecursive(node.right, res);
 
@@ -124,7 +125,7 @@ class binaryTree {
       }
       const node = stack.pop();
       res.push(node.value);
-      if (node.right != null) {
+      if (node.right) {
         cur = node.right;
       }
     }
