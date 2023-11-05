@@ -102,7 +102,7 @@ class SortingAlgorithms {
         this.mergeSort(arr, l, mid);
         this.mergeSort(arr, mid + 1, r);
 
-        let k = 0, i = l, j = mid + 1;
+        let k = 0, i = l, j = mid + 1; //k为tmp数组的下标
         while (i <= mid && j <= r) {
             if (arr[i] <= arr[j]) tmp[k++] = arr[i++];
             else tmp[k++] = arr[j++];
